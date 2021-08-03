@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<style>
+#demo{font-size: 25px;} 
+.html font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;}
+</style>    
+
+<h1>Congrats on the birth of your child</h1>
+
+<p id="demo">Click on the button below to find out their ideal first letter for their name, lucky number and favourite colour... </p>
+
+<button onclick="myFunction()">Click here to find out!</button>
+
+
+<script>
+
+let alphabet = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z']
+let randomalphabet = Math.floor(Math.random() * alphabet.length);
+
+//alert(alphabet[randomalphabet]);
+
+
+let randomnumber = Math.floor(Math.random() * 10 + 1);
+
+//alert(randomnumber)
+
+
+let red = Math.floor(Math.random() * 256);
+let green = Math.floor(Math.random() * 256);
+let blue = Math.floor(Math.random() * 256);
+
+//alert('RGB(' + red + ',' + green + ',' + blue + ')');
+
+
+
+
+//document.write('Their ideal first letter of their name is: ' + alphabet[randomalphabet] + '.<br> Their lucky number is: ' + randomnumber + '.<br> Their favourite colour is ' + 'RGB(' + red + ',' + green + ',' + blue + ').' )
+
+
+//document.body.style.backgroundColor = 'rgb(' + red + ',' + green + ',' + blue + ')';
+
+function myFunction() {
+    document.body.style.backgroundColor = 'rgb(' + red + ',' + green + ',' + blue + ')';
+  document.getElementById("demo").innerHTML = 'Their ideal first letter of their name is: ' + alphabet[randomalphabet] + '.<br> Their lucky number is: ' + randomnumber + '.<br> Their favourite colour is ' + 'RGB(' + red + ',' + green + ',' + blue + ').' ;
+
+}
+
+
+</script>
+
+
+</body>
+</html>
